@@ -37,6 +37,7 @@
             this.yellowLabel = new System.Windows.Forms.Label();
             this.debugNum = new System.Windows.Forms.Label();
             this.debugNumber = new System.Windows.Forms.Label();
+            this.sceneLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.redImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blueImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yellowImage)).BeginInit();
@@ -141,12 +142,24 @@
             this.debugNumber.TabIndex = 8;
             this.debugNumber.Text = "Debug Number";
             // 
+            // sceneLabel
+            // 
+            this.sceneLabel.AutoSize = true;
+            this.sceneLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sceneLabel.ForeColor = System.Drawing.Color.White;
+            this.sceneLabel.Location = new System.Drawing.Point(24, 250);
+            this.sceneLabel.Name = "sceneLabel";
+            this.sceneLabel.Size = new System.Drawing.Size(48, 17);
+            this.sceneLabel.TabIndex = 9;
+            this.sceneLabel.Text = "Scene";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(386, 422);
+            this.Controls.Add(this.sceneLabel);
             this.Controls.Add(this.debugNumber);
             this.Controls.Add(this.debugNum);
             this.Controls.Add(this.yellowLabel);
@@ -178,6 +191,7 @@
         private System.Windows.Forms.Label yellowLabel;
         private System.Windows.Forms.Label debugNum;
         private System.Windows.Forms.Label debugNumber;
+        private System.Windows.Forms.Label sceneLabel;
     }
 }
 

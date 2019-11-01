@@ -23,6 +23,7 @@ namespace AdventureGame
 
         //random number generators
         Random randGen = new Random();
+
         public Form1()
         {
             InitializeComponent();
@@ -56,7 +57,6 @@ namespace AdventureGame
             {
                 straightDoor = 1;
             }
-            randNumber = randGen.Next(1, 101);
             if (e.KeyCode == Keys.M)
             {
                 if (scene == 0)
@@ -106,7 +106,12 @@ namespace AdventureGame
                     else
                     {
                         outputLabel.Text = "The flashlight flickers then turns off.";
-                        Thread.Sleep(1000);
+                        redLabel.Visible = false;
+                        redImage.Visible = false;
+                        blueLabel.Visible = false;
+                        blueImage.Visible = false;
+                        Refresh();
+                        Thread.Sleep(2000);
                         scene = 4;
                     }
                 }
@@ -229,7 +234,6 @@ namespace AdventureGame
                 }
                 else if (scene == 12)
                 {
-                    outputLabel.Text = "Thank you for playing!";
                     scene = 13;
                 }
                 else if (scene == 14)
@@ -244,16 +248,16 @@ namespace AdventureGame
                     if (rightDoor == 1)
                     {
                         scene = 1;
-                        blueLabel.ForeColor = Color.Red;
+                        yellowLabel.ForeColor = Color.Red;
                     }
                     else if (leftDoor == 1)
                     {
-                        scene = 2;
+                        scene = 1;
+                        yellowLabel.ForeColor = Color.Red;
                     }
                     else if (straightDoor == 1)
                     {
-                        scene = 1;
-                        blueLabel.ForeColor = Color.Red;
+                        scene = 2;
                     }
                 }
                 else if (scene == 1)
@@ -278,6 +282,10 @@ namespace AdventureGame
             switch (scene)
             {
                 case 0:
+                    randNum = randGen.Next(1, 101);
+                    randNumber = randGen.Next(1, 101);
+                    debugNum.Text = "randNum = " + randNum;
+                    debugNumber.Text = "randNumber = " + randNumber;
                     outputLabel.Text = "You find yourself in a room. There are three doors. Which door would you like to try first?";
                     redLabel.Text = "Right";
                     blueLabel.Text = "Left";
@@ -314,6 +322,10 @@ namespace AdventureGame
                     outputLabel.Text = "You see somebody down the hall. Call to them?";
                     redLabel.Text = "Yes";
                     blueLabel.Text = "No";
+                    redLabel.Visible = true;
+                    redImage.Visible = true;
+                    blueLabel.Visible = true;
+                    blueImage.Visible = true;
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
                     break;
@@ -381,6 +393,7 @@ namespace AdventureGame
                     blueImage.Visible = false;
                     yellowLabel.Visible = false;
                     yellowImage.Visible = false;
+                    Refresh();
                     Thread.Sleep(2000);
                     this.Close();
                     break;
@@ -399,6 +412,7 @@ namespace AdventureGame
                     blueImage.Visible = false;
                     yellowLabel.Visible = false;
                     yellowImage.Visible = false;
+                    Refresh();
                     Thread.Sleep(2000);
                     this.Close();
                     break;
