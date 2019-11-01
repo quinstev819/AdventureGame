@@ -34,13 +34,16 @@ namespace AdventureGame
             yellowLabel.Visible = true;
             yellowImage.Visible = true;
             yellowLabel.Text = "Straight";
+            randNum = randGen.Next(1, 101);
+            randNumber = randGen.Next(1, 101);
+            debugNum.Text = "randNum = " + randNum;
+            debugNumber.Text = "randNumber = " + randNumber;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             //check to see what button has been pressed and advance
             //to the next appropriate scene
-            randNum = randGen.Next(1, 101);
             if (randNum < 33)
             {
                 rightDoor = 1;
@@ -62,19 +65,214 @@ namespace AdventureGame
                     {
                         scene = 2;
                     }
-                    else
+                    else if (leftDoor == 1)
                     {
                         scene = 1;
+                        redLabel.ForeColor = Color.Red;
                     }
+                    else if (straightDoor == 1)
+                    {
+                        scene = 1;
+                        redLabel.ForeColor = Color.Red;
+                    }
+                }
+                else if (scene == 1)
+                {
+                    if (rightDoor == 1)
+                    {
+                        scene = 2;
+                    }
+                    else if (leftDoor == 1)
+                    {
+                        scene = 1;
+                        redLabel.ForeColor = Color.Red;
+                    }
+                    else if (straightDoor == 1)
+                    {
+                        scene = 1;
+                        redLabel.ForeColor = Color.Red;
+                    }
+                }
+                else if (scene == 2)
+                {
+                    scene = 4;
+                }
+                else if (scene == 3)
+                {
+                    if (randNumber <= 75)
+                    {
+                        scene = 11;
+                    }
+                    else
+                    {
+                        outputLabel.Text = "The flashlight flickers then turns off.";
+                        Thread.Sleep(1000);
+                        scene = 4;
+                    }
+                }
+                else if (scene == 4)
+                {
+                    scene = 5;
+                }
+                else if (scene == 5)
+                {
+                    scene = 7;
+                }
+                else if (scene == 6)
+                {
+                    scene = 10;
+                }
+                else if (scene == 7)
+                {
+                    scene = 10;
+                }
+                else if (scene == 8)
+                {
+                    scene = 14;
+                }
+                else if (scene == 9)
+                {
+                    scene = 12;
+                }
+                else if (scene == 10)
+                {
+                    scene = 14;
+                }
+                else if (scene == 11)
+                {
+                    scene = 14;
+                }
+                else if (scene == 12)
+                {
+                    scene = 0;
+                }
+                else if (scene == 14)
+                {
+                    scene = 0;
                 }
             }
             if (e.KeyCode == Keys.B)
             {
-
+                if (scene == 0)
+                {
+                    if (rightDoor == 1)
+                    {
+                        scene = 1;
+                        blueLabel.ForeColor = Color.Red;
+                    }
+                    else if (leftDoor == 1)
+                    {
+                        scene = 2;
+                    }
+                    else if (straightDoor == 1)
+                    {
+                        scene = 1;
+                        blueLabel.ForeColor = Color.Red;
+                    }
+                }
+                else if (scene == 1)
+                {
+                    if (rightDoor == 1)
+                    {
+                        scene = 1;
+                        blueLabel.ForeColor = Color.Red;
+                    }
+                    else if (leftDoor == 1)
+                    {
+                        scene = 2;
+                    }
+                    else if (straightDoor == 1)
+                    {
+                        scene = 1;
+                        blueLabel.ForeColor = Color.Red;
+                    }
+                }
+                else if (scene == 2)
+                {
+                    scene = 3;
+                }
+                else if (scene == 3)
+                {
+                    scene = 4;
+                }
+                else if (scene == 4)
+                {
+                    scene = 12;
+                }
+                else if (scene == 5)
+                {
+                    scene = 6;
+                }
+                else if (scene == 6)
+                {
+                    scene = 9;
+                }
+                else if (scene == 7)
+                {
+                    scene = 8;
+                }
+                else if (scene == 8)
+                {
+                    scene = 12;
+                }
+                else if (scene == 9)
+                {
+                    scene = 14;
+                }
+                else if (scene == 10)
+                {
+                    scene = 12;
+                }
+                else if (scene == 11)
+                {
+                    scene = 4;
+                }
+                else if (scene == 12)
+                {
+                    outputLabel.Text = "Thank you for playing!";
+                    scene = 13;
+                }
+                else if (scene == 14)
+                {
+                    scene = 15;
+                }
             }
             if (e.KeyCode == Keys.N)
             {
-
+                if (scene == 0)
+                {
+                    if (rightDoor == 1)
+                    {
+                        scene = 1;
+                        blueLabel.ForeColor = Color.Red;
+                    }
+                    else if (leftDoor == 1)
+                    {
+                        scene = 2;
+                    }
+                    else if (straightDoor == 1)
+                    {
+                        scene = 1;
+                        blueLabel.ForeColor = Color.Red;
+                    }
+                }
+                else if (scene == 1)
+                {
+                    if (rightDoor == 1)
+                    {
+                        scene = 1;
+                        yellowLabel.ForeColor = Color.Red;
+                    }
+                    else if (leftDoor == 1)
+                    {
+                        scene = 1;
+                        yellowLabel.ForeColor = Color.Red;
+                    }
+                    else if (straightDoor == 1)
+                    {
+                        scene = 2;
+                    }
+                }
             }
             /// Display text and game options to screen based on current scene
             switch (scene)
@@ -101,6 +299,9 @@ namespace AdventureGame
                     blueLabel.Text = "Left";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    yellowLabel.ForeColor = Color.White;
+                    redLabel.ForeColor = Color.White;
+                    blueLabel.ForeColor = Color.White;
                     break;
                 case 3:
                     outputLabel.Text = "You find a flashlight. Turn it on?";

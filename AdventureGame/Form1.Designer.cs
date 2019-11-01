@@ -35,6 +35,8 @@
             this.outputLabel = new System.Windows.Forms.Label();
             this.yellowImage = new System.Windows.Forms.PictureBox();
             this.yellowLabel = new System.Windows.Forms.Label();
+            this.debugNum = new System.Windows.Forms.Label();
+            this.debugNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.redImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blueImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yellowImage)).BeginInit();
@@ -117,12 +119,36 @@
             this.yellowLabel.TabIndex = 6;
             this.yellowLabel.Text = "Straight";
             // 
+            // debugNum
+            // 
+            this.debugNum.AutoSize = true;
+            this.debugNum.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debugNum.ForeColor = System.Drawing.Color.White;
+            this.debugNum.Location = new System.Drawing.Point(21, 267);
+            this.debugNum.Name = "debugNum";
+            this.debugNum.Size = new System.Drawing.Size(80, 17);
+            this.debugNum.TabIndex = 7;
+            this.debugNum.Text = "Debug Num";
+            // 
+            // debugNumber
+            // 
+            this.debugNumber.AutoSize = true;
+            this.debugNumber.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debugNumber.ForeColor = System.Drawing.Color.White;
+            this.debugNumber.Location = new System.Drawing.Point(21, 284);
+            this.debugNumber.Name = "debugNumber";
+            this.debugNumber.Size = new System.Drawing.Size(104, 17);
+            this.debugNumber.TabIndex = 8;
+            this.debugNumber.Text = "Debug Number";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(386, 422);
+            this.Controls.Add(this.debugNumber);
+            this.Controls.Add(this.debugNum);
             this.Controls.Add(this.yellowLabel);
             this.Controls.Add(this.yellowImage);
             this.Controls.Add(this.outputLabel);
@@ -137,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.blueImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yellowImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -149,6 +176,8 @@
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.PictureBox yellowImage;
         private System.Windows.Forms.Label yellowLabel;
+        private System.Windows.Forms.Label debugNum;
+        private System.Windows.Forms.Label debugNumber;
     }
 }
 
