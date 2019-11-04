@@ -80,5 +80,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_1255.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0666f3308bbea81016370b75fc80ef8f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_LI %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nebo-transport-rechargeable-led-flashlight-on.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MDC_Bodyguard_V2_18650_1_1400x.progressive.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

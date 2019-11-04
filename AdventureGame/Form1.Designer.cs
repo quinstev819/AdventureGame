@@ -28,42 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.redImage = new System.Windows.Forms.PictureBox();
-            this.blueImage = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.redLabel = new System.Windows.Forms.Label();
             this.blueLabel = new System.Windows.Forms.Label();
             this.outputLabel = new System.Windows.Forms.Label();
-            this.yellowImage = new System.Windows.Forms.PictureBox();
             this.yellowLabel = new System.Windows.Forms.Label();
-            this.debugNum = new System.Windows.Forms.Label();
-            this.debugNumber = new System.Windows.Forms.Label();
-            this.sceneLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.redImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueImage)).BeginInit();
+            this.sceneImage = new System.Windows.Forms.PictureBox();
+            this.yellowImage = new System.Windows.Forms.PictureBox();
+            this.blueImage = new System.Windows.Forms.PictureBox();
+            this.redImage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.sceneImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yellowImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // redImage
-            // 
-            this.redImage.Image = global::AdventureGame.Properties.Resources.red_50x50;
-            this.redImage.Location = new System.Drawing.Point(24, 303);
-            this.redImage.Margin = new System.Windows.Forms.Padding(2);
-            this.redImage.Name = "redImage";
-            this.redImage.Size = new System.Drawing.Size(39, 32);
-            this.redImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.redImage.TabIndex = 0;
-            this.redImage.TabStop = false;
-            // 
-            // blueImage
-            // 
-            this.blueImage.Image = global::AdventureGame.Properties.Resources.blue_50x50;
-            this.blueImage.Location = new System.Drawing.Point(24, 339);
-            this.blueImage.Margin = new System.Windows.Forms.Padding(2);
-            this.blueImage.Name = "blueImage";
-            this.blueImage.Size = new System.Drawing.Size(39, 32);
-            this.blueImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.blueImage.TabIndex = 1;
-            this.blueImage.TabStop = false;
             // 
             // redLabel
             // 
@@ -99,6 +77,27 @@
             this.outputLabel.Text = "You find yourself in a room. There are three doors. Which door would you like to " +
     "try first?";
             // 
+            // yellowLabel
+            // 
+            this.yellowLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yellowLabel.ForeColor = System.Drawing.Color.White;
+            this.yellowLabel.Location = new System.Drawing.Point(67, 385);
+            this.yellowLabel.Name = "yellowLabel";
+            this.yellowLabel.Size = new System.Drawing.Size(100, 23);
+            this.yellowLabel.TabIndex = 6;
+            this.yellowLabel.Text = "Straight";
+            // 
+            // sceneImage
+            // 
+            this.sceneImage.BackgroundImage = global::AdventureGame.Properties.Resources.IMG_1255;
+            this.sceneImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sceneImage.Location = new System.Drawing.Point(12, 86);
+            this.sceneImage.Margin = new System.Windows.Forms.Padding(0);
+            this.sceneImage.Name = "sceneImage";
+            this.sceneImage.Size = new System.Drawing.Size(362, 212);
+            this.sceneImage.TabIndex = 7;
+            this.sceneImage.TabStop = false;
+            // 
             // yellowImage
             // 
             this.yellowImage.Image = global::AdventureGame.Properties.Resources.yellow_50x50;
@@ -110,48 +109,27 @@
             this.yellowImage.TabIndex = 5;
             this.yellowImage.TabStop = false;
             // 
-            // yellowLabel
+            // blueImage
             // 
-            this.yellowLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yellowLabel.ForeColor = System.Drawing.Color.White;
-            this.yellowLabel.Location = new System.Drawing.Point(67, 385);
-            this.yellowLabel.Name = "yellowLabel";
-            this.yellowLabel.Size = new System.Drawing.Size(100, 23);
-            this.yellowLabel.TabIndex = 6;
-            this.yellowLabel.Text = "Straight";
+            this.blueImage.Image = global::AdventureGame.Properties.Resources.blue_50x50;
+            this.blueImage.Location = new System.Drawing.Point(24, 339);
+            this.blueImage.Margin = new System.Windows.Forms.Padding(2);
+            this.blueImage.Name = "blueImage";
+            this.blueImage.Size = new System.Drawing.Size(39, 32);
+            this.blueImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.blueImage.TabIndex = 1;
+            this.blueImage.TabStop = false;
             // 
-            // debugNum
+            // redImage
             // 
-            this.debugNum.AutoSize = true;
-            this.debugNum.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.debugNum.ForeColor = System.Drawing.Color.White;
-            this.debugNum.Location = new System.Drawing.Point(21, 267);
-            this.debugNum.Name = "debugNum";
-            this.debugNum.Size = new System.Drawing.Size(80, 17);
-            this.debugNum.TabIndex = 7;
-            this.debugNum.Text = "Debug Num";
-            // 
-            // debugNumber
-            // 
-            this.debugNumber.AutoSize = true;
-            this.debugNumber.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.debugNumber.ForeColor = System.Drawing.Color.White;
-            this.debugNumber.Location = new System.Drawing.Point(21, 284);
-            this.debugNumber.Name = "debugNumber";
-            this.debugNumber.Size = new System.Drawing.Size(104, 17);
-            this.debugNumber.TabIndex = 8;
-            this.debugNumber.Text = "Debug Number";
-            // 
-            // sceneLabel
-            // 
-            this.sceneLabel.AutoSize = true;
-            this.sceneLabel.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sceneLabel.ForeColor = System.Drawing.Color.White;
-            this.sceneLabel.Location = new System.Drawing.Point(24, 250);
-            this.sceneLabel.Name = "sceneLabel";
-            this.sceneLabel.Size = new System.Drawing.Size(48, 17);
-            this.sceneLabel.TabIndex = 9;
-            this.sceneLabel.Text = "Scene";
+            this.redImage.Image = global::AdventureGame.Properties.Resources.red_50x50;
+            this.redImage.Location = new System.Drawing.Point(24, 303);
+            this.redImage.Margin = new System.Windows.Forms.Padding(2);
+            this.redImage.Name = "redImage";
+            this.redImage.Size = new System.Drawing.Size(39, 32);
+            this.redImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.redImage.TabIndex = 0;
+            this.redImage.TabStop = false;
             // 
             // Form1
             // 
@@ -159,9 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(386, 422);
-            this.Controls.Add(this.sceneLabel);
-            this.Controls.Add(this.debugNumber);
-            this.Controls.Add(this.debugNum);
+            this.Controls.Add(this.sceneImage);
             this.Controls.Add(this.yellowLabel);
             this.Controls.Add(this.yellowImage);
             this.Controls.Add(this.outputLabel);
@@ -169,14 +145,15 @@
             this.Controls.Add(this.redLabel);
             this.Controls.Add(this.blueImage);
             this.Controls.Add(this.redImage);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Lost in a building";
+            this.Text = "Building Escape";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.redImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blueImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sceneImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yellowImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blueImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redImage)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -189,9 +166,7 @@
         private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.PictureBox yellowImage;
         private System.Windows.Forms.Label yellowLabel;
-        private System.Windows.Forms.Label debugNum;
-        private System.Windows.Forms.Label debugNumber;
-        private System.Windows.Forms.Label sceneLabel;
+        private System.Windows.Forms.PictureBox sceneImage;
     }
 }
 

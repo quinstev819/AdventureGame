@@ -63,6 +63,26 @@ namespace AdventureGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0666f3308bbea81016370b75fc80ef8f {
+            get {
+                object obj = ResourceManager.GetObject("_0666f3308bbea81016370b75fc80ef8f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_LI__2_ {
+            get {
+                object obj = ResourceManager.GetObject("_1_LI__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_50x50 {
             get {
                 object obj = ResourceManager.GetObject("blue_50x50", resourceCulture);
@@ -76,6 +96,36 @@ namespace AdventureGame.Properties {
         internal static System.Drawing.Bitmap green_50x50 {
             get {
                 object obj = ResourceManager.GetObject("green_50x50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_1255 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_1255", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MDC_Bodyguard_V2_18650_1_1400x_progressive {
+            get {
+                object obj = ResourceManager.GetObject("MDC_Bodyguard_V2_18650_1_1400x_progressive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nebo_transport_rechargeable_led_flashlight_on {
+            get {
+                object obj = ResourceManager.GetObject("nebo_transport_rechargeable_led_flashlight_on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

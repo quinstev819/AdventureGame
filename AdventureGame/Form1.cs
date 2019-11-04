@@ -37,8 +37,7 @@ namespace AdventureGame
             yellowLabel.Text = "Straight";
             randNum = randGen.Next(1, 101);
             randNumber = randGen.Next(1, 101);
-            debugNum.Text = "randNum = " + randNum;
-            debugNumber.Text = "randNumber = " + randNumber;
+            sceneImage.BackgroundImage = Properties.Resources.IMG_1255;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -111,7 +110,14 @@ namespace AdventureGame
                         blueLabel.Visible = false;
                         blueImage.Visible = false;
                         Refresh();
-                        Thread.Sleep(2000);
+                        sceneImage.BackgroundImage = Properties.Resources.nebo_transport_rechargeable_led_flashlight_on;
+                        Thread.Sleep(1000);
+                        sceneImage.Visible = false;
+                        Thread.Sleep(250);
+                        sceneImage.Visible = true;
+                        Thread.Sleep(250);
+                        sceneImage.Visible = false;
+                        Refresh();
                         scene = 4;
                     }
                 }
@@ -284,14 +290,13 @@ namespace AdventureGame
                 case 0:
                     randNum = randGen.Next(1, 101);
                     randNumber = randGen.Next(1, 101);
-                    debugNum.Text = "randNum = " + randNum;
-                    debugNumber.Text = "randNumber = " + randNumber;
                     outputLabel.Text = "You find yourself in a room. There are three doors. Which door would you like to try first?";
                     redLabel.Text = "Right";
                     blueLabel.Text = "Left";
                     yellowLabel.Visible = true;
                     yellowImage.Visible = true;
                     yellowLabel.Text = "Straight";
+                    sceneImage.BackgroundImage = Properties.Resources.IMG_1255;
                     break;
                 case 1:
                     outputLabel.Text = "The door is locked. Try again.";
@@ -310,6 +315,7 @@ namespace AdventureGame
                     yellowLabel.ForeColor = Color.White;
                     redLabel.ForeColor = Color.White;
                     blueLabel.ForeColor = Color.White;
+                    sceneImage.BackgroundImage = Properties.Resources._0666f3308bbea81016370b75fc80ef8f;
                     break;
                 case 3:
                     outputLabel.Text = "You find a flashlight. Turn it on?";
@@ -317,6 +323,7 @@ namespace AdventureGame
                     blueLabel.Text = "No";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    sceneImage.BackgroundImage = Properties.Resources.MDC_Bodyguard_V2_18650_1_1400x_progressive;
                     break;
                 case 4:
                     outputLabel.Text = "You see somebody down the hall. Call to them?";
@@ -328,6 +335,7 @@ namespace AdventureGame
                     blueImage.Visible = true;
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    sceneImage.BackgroundImage = Properties.Resources._1_LI__2_;
                     break;
                 case 5:
                     outputLabel.Text = "They ask you how you got there. Do you tell them you don't know or make up an answer?";
