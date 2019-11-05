@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace AdventureGame
 {
@@ -15,14 +16,25 @@ namespace AdventureGame
     {
         //tracks what part of the game the user is at
         int scene = 0;
+
+        //initializing the random number generator value holders
         int randNum;
         int randNumber = 0;
+
+        //initializing the door values for the first random number generator
         int rightDoor = 0;
         int leftDoor = 0;
         int straightDoor = 0;
 
         //random number generators
         Random randGen = new Random();
+
+        //sound players
+        SoundPlayer doorCreakingSound = new SoundPlayer(Properties.Resources.Old_Door_Creaking_SoundBible_com_1197162460);
+        SoundPlayer flashlightDeadSound = new SoundPlayer(Properties.Resources.Dying_Light_Bulb_SoundBible_com_742005847);
+        SoundPlayer doorLockedSound = new SoundPlayer(Properties.Resources._472674__tvilgiat__locked_door);
+        SoundPlayer flashlightTurningOnSound = new SoundPlayer(Properties.Resources._173420__lightyarn__flashlight_on);
+        SoundPlayer conversationSound = new SoundPlayer(Properties.Resources._329158__blancabartual__ambienceconversation);
 
         public Form1()
         {
@@ -35,15 +47,18 @@ namespace AdventureGame
             yellowLabel.Visible = true;
             yellowImage.Visible = true;
             yellowLabel.Text = "Straight";
+
+            //setting up the random number generators
             randNum = randGen.Next(1, 101);
             randNumber = randGen.Next(1, 101);
+
+            //displaying the image for scene 0
             sceneImage.BackgroundImage = Properties.Resources.IMG_1255;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            //check to see what button has been pressed and advance
-            //to the next appropriate scene
+            //setting up which door is unlocked at the beginning of the game
             if (randNum < 33)
             {
                 rightDoor = 1;
@@ -56,6 +71,8 @@ namespace AdventureGame
             {
                 straightDoor = 1;
             }
+
+            //check to see what button has been pressed and advance to the next appropriate scene
             if (e.KeyCode == Keys.M)
             {
                 if (scene == 0)
@@ -105,6 +122,7 @@ namespace AdventureGame
                     else
                     {
                         outputLabel.Text = "The flashlight flickers then turns off.";
+                        flashlightDeadSound.Play();
                         redLabel.Visible = false;
                         redImage.Visible = false;
                         blueLabel.Visible = false;
@@ -284,7 +302,10 @@ namespace AdventureGame
                     }
                 }
             }
-            /// Display text and game options to screen based on current scene
+            //Display text and game options to screen based on current scene
+
+            //Scene images 1, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15
+            //Scene sounds 0, 3, 4, 6, 7, 8, 9, 10, 12, 13, 14, 15
             switch (scene)
             {
                 case 0:
@@ -305,6 +326,7 @@ namespace AdventureGame
                     yellowLabel.Visible = true;
                     yellowImage.Visible = true;
                     yellowLabel.Text = "Straight";
+                    doorLockedSound.Play();
                     break;
                 case 2:
                     outputLabel.Text = "The door creaks open. You find yourself in a hallway. Turn left or right?";
@@ -315,6 +337,7 @@ namespace AdventureGame
                     yellowLabel.ForeColor = Color.White;
                     redLabel.ForeColor = Color.White;
                     blueLabel.ForeColor = Color.White;
+                    doorCreakingSound.Play();
                     sceneImage.BackgroundImage = Properties.Resources._0666f3308bbea81016370b75fc80ef8f;
                     break;
                 case 3:
@@ -343,6 +366,9 @@ namespace AdventureGame
                     blueLabel.Text = "Make up an answer";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    conversationSound.Play();
+                    Thread.Sleep(2000);
+                    conversationSound.Stop();
                     break;
                 case 6:
                     outputLabel.Text = "They seem skeptical of your answer but believe you. The ask you if you need help.";
@@ -385,6 +411,8 @@ namespace AdventureGame
                     blueLabel.Text = "No";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    flashlightTurningOnSound.Play();
+                    sceneImage.BackgroundImage = Properties.Resources.nebo_transport_rechargeable_led_flashlight_on;
                     break;
                 case 12:
                     outputLabel.Text = "You try to find your way around, but you get lost in the building. You never find your way out. Do you want to play again?";

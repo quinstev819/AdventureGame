@@ -207,6 +207,10 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Dying_Light_Bulb_SoundBible_com_742005847" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dying Light Bulb-SoundBible.com-742005847.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="green_50x50" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -285,7 +289,6 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="IMG_1255" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_1255.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -294,6 +297,9 @@
   </data>
   <data name="nebo_transport_rechargeable_led_flashlight_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nebo-transport-rechargeable-led-flashlight-on.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Door_Creaking_SoundBible_com_1197162460" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old Door Creaking-SoundBible.com-1197162460.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="red_50x50" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -466,7 +472,16 @@
   <data name="_0666f3308bbea81016370b75fc80ef8f" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0666f3308bbea81016370b75fc80ef8f.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_173420__lightyarn__flashlight_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\173420__lightyarn__flashlight-on.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="_1_LI__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1_LI (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_329158__blancabartual__ambienceconversation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\329158__blancabartual__ambienceconversation.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_472674__tvilgiat__locked_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\472674__tvilgiat__locked-door.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

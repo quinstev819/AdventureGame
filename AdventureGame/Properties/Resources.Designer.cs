@@ -81,12 +81,48 @@ namespace AdventureGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _173420__lightyarn__flashlight_on {
+            get {
+                return ResourceManager.GetStream("_173420__lightyarn__flashlight_on", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _329158__blancabartual__ambienceconversation {
+            get {
+                return ResourceManager.GetStream("_329158__blancabartual__ambienceconversation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _472674__tvilgiat__locked_door {
+            get {
+                return ResourceManager.GetStream("_472674__tvilgiat__locked_door", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap blue_50x50 {
             get {
                 object obj = ResourceManager.GetObject("blue_50x50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Dying_Light_Bulb_SoundBible_com_742005847 {
+            get {
+                return ResourceManager.GetStream("Dying_Light_Bulb_SoundBible_com_742005847", resourceCulture);
             }
         }
         
@@ -127,6 +163,15 @@ namespace AdventureGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("nebo_transport_rechargeable_led_flashlight_on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Old_Door_Creaking_SoundBible_com_1197162460 {
+            get {
+                return ResourceManager.GetStream("Old_Door_Creaking_SoundBible_com_1197162460", resourceCulture);
             }
         }
         

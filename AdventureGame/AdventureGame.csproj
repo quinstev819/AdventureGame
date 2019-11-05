@@ -95,5 +95,20 @@
   <ItemGroup>
     <None Include="Resources\MDC_Bodyguard_V2_18650_1_1400x.progressive.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Old Door Creaking-SoundBible.com-1197162460.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dying Light Bulb-SoundBible.com-742005847.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\472674__tvilgiat__locked-door.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\173420__lightyarn__flashlight-on.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\329158__blancabartual__ambienceconversation.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
