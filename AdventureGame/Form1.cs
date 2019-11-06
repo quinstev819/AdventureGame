@@ -360,7 +360,7 @@ namespace AdventureGame
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
                     sceneImage.BackgroundImage = Properties.Resources._1_LI__2_;
-                    break;1
+                    break;
                 case 5:
                     outputLabel.Text = "They ask you how you got there. Do you tell them you don't know or make up an answer?";
                     redLabel.Text = "You don't know";
