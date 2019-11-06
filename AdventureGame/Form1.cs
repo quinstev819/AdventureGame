@@ -304,7 +304,7 @@ namespace AdventureGame
             }
             //Display text and game options to screen based on current scene
 
-            //Scene images 1, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15
+            //Scene images 5, 6, 7, 10, 13, 14, 15
             //Scene sounds 0, 3, 4, 6, 7, 8, 9, 10, 12, 13, 14, 15
             switch (scene)
             {
@@ -326,6 +326,7 @@ namespace AdventureGame
                     yellowLabel.Visible = true;
                     yellowImage.Visible = true;
                     yellowLabel.Text = "Straight";
+                    sceneImage.BackgroundImage = Properties.Resources.IMG_1255;
                     doorLockedSound.Play();
                     break;
                 case 2:
@@ -359,13 +360,14 @@ namespace AdventureGame
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
                     sceneImage.BackgroundImage = Properties.Resources._1_LI__2_;
-                    break;
+                    break;1
                 case 5:
                     outputLabel.Text = "They ask you how you got there. Do you tell them you don't know or make up an answer?";
                     redLabel.Text = "You don't know";
                     blueLabel.Text = "Make up an answer";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    sceneImage.BackgroundImage = Properties.Resources.hat_man;
                     conversationSound.Play();
                     Thread.Sleep(2000);
                     conversationSound.Stop();
@@ -376,6 +378,10 @@ namespace AdventureGame
                     blueLabel.Text = "No";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    sceneImage.BackgroundImage = Properties.Resources.hat_man;
+                    conversationSound.Play();
+                    Thread.Sleep(2000);
+                    conversationSound.Stop();
                     break;
                 case 7:
                     outputLabel.Text = "They ask you what you are doing here. Do you tell them you don't know or do you try to learn about where you are.";
@@ -390,6 +396,7 @@ namespace AdventureGame
                     blueLabel.Text = "Left";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    sceneImage.BackgroundImage = Properties.Resources._0666f3308bbea81016370b75fc80ef8f;
                     break;
                 case 9:
                     outputLabel.Text = "They leave you be. Do you try to find your way out, or try to figure out where you are?";
@@ -397,6 +404,7 @@ namespace AdventureGame
                     blueLabel.Text = "Try to figure out where you are";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    sceneImage.BackgroundImage = Properties.Resources._0666f3308bbea81016370b75fc80ef8f;
                     break;
                 case 10:
                     outputLabel.Text = "They ask you if you'd like directions to get out. Do you say yes or no.";
@@ -420,6 +428,7 @@ namespace AdventureGame
                     blueLabel.Text = "No";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    sceneImage.BackgroundImage = Properties.Resources._0666f3308bbea81016370b75fc80ef8f;
                     break;
                 case 13:
                     outputLabel.Text = "Thank you for playing!";
