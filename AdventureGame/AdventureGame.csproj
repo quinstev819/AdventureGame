@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="Resources\hat-man.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\84953__amszala__hallway.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

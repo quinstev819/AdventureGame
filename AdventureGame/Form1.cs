@@ -35,6 +35,7 @@ namespace AdventureGame
         SoundPlayer doorLockedSound = new SoundPlayer(Properties.Resources._472674__tvilgiat__locked_door);
         SoundPlayer flashlightTurningOnSound = new SoundPlayer(Properties.Resources._173420__lightyarn__flashlight_on);
         SoundPlayer conversationSound = new SoundPlayer(Properties.Resources._329158__blancabartual__ambienceconversation);
+        SoundPlayer hallwaySound = new SoundPlayer(Properties.Resources._84953__amszala__hallway);
 
         public Form1()
         {
@@ -118,6 +119,7 @@ namespace AdventureGame
                     if (randNumber <= 75)
                     {
                         scene = 11;
+                        flashlightTurningOnSound.Play();
                     }
                     else
                     {
@@ -128,6 +130,7 @@ namespace AdventureGame
                         blueLabel.Visible = false;
                         blueImage.Visible = false;
                         Refresh();
+                        flashlightDeadSound.Play();
                         sceneImage.BackgroundImage = Properties.Resources.nebo_transport_rechargeable_led_flashlight_on;
                         Thread.Sleep(1000);
                         sceneImage.Visible = false;
@@ -304,8 +307,8 @@ namespace AdventureGame
             }
             //Display text and game options to screen based on current scene
 
-            //Scene images 5, 6, 7, 10, 13, 14, 15
-            //Scene sounds 0, 3, 4, 6, 7, 8, 9, 10, 12, 13, 14, 15
+            //Scene images 10, 13, 14, 15
+            //Scene sounds 13, 14, 15
             switch (scene)
             {
                 case 0:
@@ -318,6 +321,9 @@ namespace AdventureGame
                     yellowImage.Visible = true;
                     yellowLabel.Text = "Straight";
                     sceneImage.BackgroundImage = Properties.Resources.IMG_1255;
+                    hallwaySound.Play();
+                    Thread.Sleep(2000);
+                    hallwaySound.Stop();
                     break;
                 case 1:
                     outputLabel.Text = "The door is locked. Try again.";
@@ -348,6 +354,9 @@ namespace AdventureGame
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
                     sceneImage.BackgroundImage = Properties.Resources.MDC_Bodyguard_V2_18650_1_1400x_progressive;
+                    hallwaySound.Play();
+                    Thread.Sleep(2000);
+                    hallwaySound.Stop();
                     break;
                 case 4:
                     outputLabel.Text = "You see somebody down the hall. Call to them?";
@@ -360,6 +369,9 @@ namespace AdventureGame
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
                     sceneImage.BackgroundImage = Properties.Resources._1_LI__2_;
+                    hallwaySound.Play();
+                    Thread.Sleep(2000);
+                    hallwaySound.Stop();
                     break;
                 case 5:
                     outputLabel.Text = "They ask you how you got there. Do you tell them you don't know or make up an answer?";
@@ -389,6 +401,10 @@ namespace AdventureGame
                     blueLabel.Text = "Try to learn about where you are";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    sceneImage.BackgroundImage = Properties.Resources.hat_man;
+                    conversationSound.Play();
+                    Thread.Sleep(2000);
+                    conversationSound.Stop();
                     break;
                 case 8:
                     outputLabel.Text = "They leave you be. Do you continue down the hall on the right or left?";
@@ -397,6 +413,9 @@ namespace AdventureGame
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
                     sceneImage.BackgroundImage = Properties.Resources._0666f3308bbea81016370b75fc80ef8f;
+                    hallwaySound.Play();
+                    Thread.Sleep(2000);
+                    hallwaySound.Stop();
                     break;
                 case 9:
                     outputLabel.Text = "They leave you be. Do you try to find your way out, or try to figure out where you are?";
@@ -405,6 +424,9 @@ namespace AdventureGame
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
                     sceneImage.BackgroundImage = Properties.Resources._0666f3308bbea81016370b75fc80ef8f;
+                    hallwaySound.Play();
+                    Thread.Sleep(2000);
+                    hallwaySound.Stop();
                     break;
                 case 10:
                     outputLabel.Text = "They ask you if you'd like directions to get out. Do you say yes or no.";
@@ -412,6 +434,9 @@ namespace AdventureGame
                     blueLabel.Text = "No";
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
+                    conversationSound.Play();
+                    Thread.Sleep(2000);
+                    conversationSound.Stop();
                     break;
                 case 11:
                     outputLabel.Text = "The flashlight turned on revealing a payphone at the end of the hall. Call for help?";
@@ -421,6 +446,9 @@ namespace AdventureGame
                     yellowLabel.Visible = false;
                     flashlightTurningOnSound.Play();
                     sceneImage.BackgroundImage = Properties.Resources.nebo_transport_rechargeable_led_flashlight_on;
+                    hallwaySound.Play();
+                    Thread.Sleep(2000);
+                    hallwaySound.Stop();
                     break;
                 case 12:
                     outputLabel.Text = "You try to find your way around, but you get lost in the building. You never find your way out. Do you want to play again?";
@@ -429,6 +457,7 @@ namespace AdventureGame
                     yellowImage.Visible = false;
                     yellowLabel.Visible = false;
                     sceneImage.BackgroundImage = Properties.Resources._0666f3308bbea81016370b75fc80ef8f;
+                    hallwaySound.Play();
                     break;
                 case 13:
                     outputLabel.Text = "Thank you for playing!";
