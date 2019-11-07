@@ -116,5 +116,17 @@
   <ItemGroup>
     <None Include="Resources\84953__amszala__hallway.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ta Da-SoundBible.com-1884170640.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sad_Trombone-Joe_Lamb-665429450.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-door-1024x682.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
